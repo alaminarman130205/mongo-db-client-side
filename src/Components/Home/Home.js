@@ -34,7 +34,11 @@ const Home = () => {
           <p key={user._id}>
             {user.name}
             <br />
-            {user.email} <button onClick={() => handleDelete(user)}>X</button>
+            {user.email}
+            <Link to={`/update/${user._id}`}>
+              <button>update</button>
+            </Link>
+            <button onClick={() => handleDelete(user)}>X</button>
           </p>
         ))}
       </div>
